@@ -16,17 +16,6 @@ import {
   GoogleLoginProvider
 } from 'angularx-social-login';
 
-// const config = new SocialAuthServiceConfig ([
-//   {
-//     id: GoogleLoginProvider,
-//     provider: new GoogleLoginProvider("637046600196-r493helpkef6hl8uhgndslj38dt48p60.apps.googleusercontent.com")
-//   }
-// ])
-
-// export function provideConfig(){
-//   return config;
-// }
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,11 +45,7 @@ import {
           provider: new GoogleLoginProvider(
             "637046600196-r493helpkef6hl8uhgndslj38dt48p60.apps.googleusercontent.com"
           )
-        },
-        // {
-        //   id: FacebookLoginProvider.PROVIDER_ID,
-        //   provider: new FacebookLoginProvider('clientId')
-        // }
+        }
       ]
     } as SocialAuthServiceConfig,
   }
