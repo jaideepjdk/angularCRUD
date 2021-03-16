@@ -1,0 +1,32 @@
+<div *ngIf="!user" class= "card text-center">
+  <h6 class="card-header">Google login </h6>
+  <div class="card-block">
+    <h4 class="card-title">Not Signed in</h4>
+    <p class="card-text"> sign in with</p>
+    </div>
+    <div>
+      <button class="btn btn-social-icon btn-google mx-1" (click)="signInWithGoogle()">
+        Google
+      </button>
+    </div>
+</div>
+
+
+<div *ngIf="user" class= "card text-center">
+  <h6 class="card-header">Google login </h6>
+  <div class="card-block">
+  <img width="auto" height="auto" class="responsive"src="{{ user.photoUrl }}">
+</div>
+  <div class="card-block">
+    <i class="bi bi-google"></i>
+
+    <h4 class="card-title">{{ user.name }}</h4>
+    <p class="card-text">{{ user.email }}</p>
+    </div>
+    <div>
+      <button class="btn btn-social-icon btn-google mx-1" (click)="signOut()">
+        Sign out
+      </button>
+    </div>
+</div>
+
